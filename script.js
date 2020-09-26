@@ -16,3 +16,28 @@ const books = [
         title: "Terrible book",
     },
 ];
+
+
+const listItems = document.querySelector("ul");
+
+console.log(listItems)
+
+let html = "";
+
+for (let i = 0; i < books.length; i++) {
+  // html = html + "<p>" + books[i].isbn + "</p>"
+
+  let remove = "❌"
+
+   html += `
+   <div class="books-list"> 
+   <h3>${books[i].isbn}</h3>
+   <p>Title: ${books[i].title}</p>
+   <p>:${remove}
+   </div>
+   `;
+
+
+console.log(html);
+}
+listItems.innerHTML = html;
