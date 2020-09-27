@@ -31,13 +31,14 @@ for (let i = 0; i < books.length; i++) {
 
    html += `
    <div class="books-list"> 
-   <h3>${books[i].isbn}</h3>
-   <p>Title: ${books[i].title}</p>
-   <p>:${remove}
+   <h3>Title: ${books[i].title}</h3>
+   <p>${books[i].isbn}</p>
+   <p>${remove}
    </div>
    `;
 
 
 console.log(html);
 }
+
 listItems.innerHTML = html;
